@@ -10,12 +10,12 @@ func main() {
 	// create a channel to receive value of odd number
 	// this channel would filled up with every value that sent by func oddNumber
 	// channel also make process go routine is synchronous
-	// so the main go routine is waiting till channel in this go routine is filled up
+	// so the main go routine is waiting/blocked till channel in this go routine is filled up
 	o := make(chan int)
 	// create a channel to receive value of even number
 	// this channel would filled up with every value that sent by func evenNumber
 	// channel also make process go routine is synchronous
-	// so the main go routine is waiting till channel in this go routine is filled up
+	// so the main go routine is waiting/blocked till channel in this go routine is filled up
 	e := make(chan int)
 
 	// spawn go routine to asynchronouze oddNumber
